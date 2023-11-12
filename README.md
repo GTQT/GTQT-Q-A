@@ -36,6 +36,8 @@ XaeroWaypoints 此文件夹存放着小地图标点信息，XaeroWorldMap 此文
 
 引起存档消失的原因大部分来自于visualore这个模组（触发条件，在非主世界维度使用探矿仪扫矿），如果不希望存档消失，删除这个模组即可。
 
+如果你在使用终端探矿时遇到崩溃，请使用其他扫描仪器
+
 3.如果你的存档出现地形生成问题（例如两次地图生成的一模一样，或者地形出现断层），在新建世界的时候不要使用相同的命名即可。
 
 4.游戏优化攻略：适当调低角视场，在视频设置中选择流畅画质，关闭平滑光照，关闭动态光源，动画全关，渲染距离拉低（其余部分自行选择），不要开快速渲染！
@@ -44,12 +46,17 @@ XaeroWaypoints 此文件夹存放着小地图标点信息，XaeroWorldMap 此文
 
 6.开局后先在第一章选择游戏难度！！！
 
-请注意，里程碑和部分奖励只对easy难度开放，其余并无差别，且选择后不可修改，如需要修改，请打开作弊模式，输入 添加阶段/gamestage add 【你的id】 (easy\hard)   移除阶段/gamestage clear 【你的id】 (easy\hard)
-商店部分出现部分物品贴图缺失系模组正常现象，内容暂未制作，并且此类物品均为后期内容，不影响现阶段游玩。
+请注意，里程碑和部分奖励只对easy难度开放，其余并无差别，且选择后不可修改。
 
-关于前置任务，如图所示，你需要解锁所有的前置才能解锁下一个。当然，不是所有任务都需要完成所有前置。
+如需要修改，请打开作弊模式，输入 添加阶段/gamestage add 【你的id】 (easy\hard)   
 
-7.跑图卡顿：
+移除阶段/gamestage clear 【你的id】 (easy\hard)
+
+7.商店部分出现部分物品贴图缺失系模组正常现象，内容暂未制作，并且此类物品均为后期内容，不影响现阶段游玩。
+
+8.关于前置任务，如图所示，你需要解锁所有的前置才能解锁下一个。当然，不是所有任务都需要完成所有前置。
+
+9.跑图卡顿：
 
 RoguelikeDungeonsFnarEdition-1.12.2-2.4.4
 
@@ -57,7 +64,53 @@ BetterMineshaftsForge-1.12.2-2.2.1
 
 bettercaves-1.12.2-2.0.4
 
+也可以选择使用原版地形生成器。
+
 删除以上三个模组，删掉之后跑图比原版还流畅。
 
+10.任务如果遇到无法解锁，请查看任务前置是否完成，如何看任务前置
+随便点开一个任务，你会在任务框顶部最左边图标的正下方有一个向左的三角，点击三角即可查看任务前置。
 
+11.关于内网穿透显示 发生致命错误，链接终止
+请按照如下步骤 单人模式打开或者创建你所需要的游戏存档，在生存模式下进入花园世界并且保证花园世界拥有一个FTB强制加载区块，3-5秒后重新尝试内网穿透。或者删除 实用世界 UtilityWorlds模组（这会导致花园世界消失，这也意味着你需要提前搬家，避免造成损失）
 
+12.如何关闭左上角的小字
+/igi disable
+/igi config
+
+13.如何关闭屏幕左侧的TOPC提示
+
+非潜行状态手持readme右击（在你的阿卡什宝典里边）：
+
+Needed：需要检测器才能显示信息；
+
+Not Needed：直接显示，不需要检测器；
+
+Extended：需要检测器才能显示详细信息。
+
+潜行状态手持readme右击：
+
+左侧可调整信息的显示位置，默认为左上角，点击左侧区域调整位置。
+
+右侧可调整信息的显示样式和缩放。
+
+14.区块加载器
+
+打开位于右上角的FTB区块加载功能
+
+单击区块：认领，在你的区块内默认防爆
+
+SHIFT+点击：保持加载，无论玩家处于什么维度。
+
+关于服务器区块问题。
+
+请优先联系你的服务器管理员协调区块加载权限以及是否开启本功能。
+
+15.请不要自行添加I18汉化，jech等模组，否则你将无法启动游戏
+
+16.如果你在更新过程中任务进度重置系正常情况，请按照如下步骤操作
+
+17.如果需要开启全屏，请在视频设置里选择 全屏：开
+
+18.如果遇到内存清理卡顿，使用如下JVM参数：
+-d64 -XX:+AggressiveOpts -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:+CMSConcurrentMTEnabled -XX:ParallelGCThreads=8 -Dsun.rmi.dgc.server.gcInterval=3600000 -XX:+UnlockExperimentalVMOptions -XX:+ExplicitGCInvokesConcurrent -XX:MaxGCPauseMillis=50 -XX:+AlwaysPreTouch -XX:+UseStringDeduplication -Dfml.ignorePatchDiscrepancies=true -Dfml.ignoreInvalidMinecraftCertificates=true -XX:-OmitStackTraceInFastThrow -XX:+OptimizeStringConcat -XX:+UseAdaptiveGCBoundary -XX:NewRatio=3 -Dfml.readTimeout=90 -XX:+UseFastAccessorMethods
